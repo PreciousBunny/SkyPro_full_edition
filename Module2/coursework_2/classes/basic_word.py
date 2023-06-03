@@ -9,8 +9,9 @@ class BasicWord:
     def __init__(self, word, subwords):
         self.word = word
         self.subwords = subwords
+        self.min_length_subword = len(min(self.subwords, key=len))
 
-    def has_subword(self, user_subword) -> bool:
+    def is_subword(self, user_subword) -> bool:
         """
         Метод возвращает наличие введенного слова в списке допустимых подслов (вернет bool).
         """
@@ -26,7 +27,7 @@ class BasicWord:
     @property
     def get_min_length_subword(self):
         """Метод возвращает самую минимальную длину из подслов"""
-        return len(min(self.subwords, key=len))
+        return self.min_length_subword
 
     def __repr__(self):
         """Метод возвращает информацию о слове и кол-ве его подслов"""
