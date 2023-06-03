@@ -1,4 +1,3 @@
-
 from classes.question import Question
 from functions import load_questions, count_correct_answers, count_points
 
@@ -27,3 +26,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
