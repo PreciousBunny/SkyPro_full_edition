@@ -109,7 +109,7 @@ def main():
         current_encoded = morse_encode(current_word)
         print(f"Слово {i} {current_encoded}")
 
-        user_input = input("> Ответ: ")
+        user_input = input(">_ Ответ: ")
 
         if user_input.lower() == current_word:
             print(f"Верно, {current_word}!\n")
